@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #d3d3d3;
+}
+
+.header {
+  padding: 5%;
+  color: #272a31;
+  margin-bottom: 20px;
+}
+
+.header .menu-items {
+  display: none;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 5%;
+  margin-bottom: 40px;
+}
+
+.headline div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.headline .headline-title {
+  color: #ec5242;
+}
+
+.headline .headline-title h1,
+.headline .headline-title p {
+  display: flex;
+  font-family: 'Lato', sans-serif;
+  flex-wrap: wrap;
+}
+
+.headline .headline-title h1 {
+  font-size: 48px;
+}
+
+.headline .headline-title p {
+  font-size: 24px;
+}
+
+.headline .headline-details {
+  display: flex;
+  border: 1px solid #fff;
+  padding: 15px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5rem;
+  color: #272a31;
+}
+
+.headline .headline-bottom {
+  font-family: 'Lato', sans-serif;
+  color: #272a31;
+}
+
+.headline .headline-bottom .bottom-top {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.main-program {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  background-image: url('public/assets/images/bg-x.png');
+  background-color: #272a31;
+  gap: 15px;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.main-program h2 {
+  color: #fff;
+}
+
+.main-program span {
+  display: flex;
+  align-self: center;
+  width: 50px;
+  border: 1px solid #ec5242;
+}
+
+.main-program .program-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-program .program-cards .card{
+  display: flex;
+  background-color: #50545c75;
+  color: #fff;
+  align-items: center;
+  padding: 3%;
+}
+
+.main-program .program-cards .card i {
+  width: 15%;
+}
+
+.main-program .program-cards .card h3{
+  color: #ec5242;
+  font-size: 18px;
+  width: 35%;
+  padding: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-program .program-cards .card p {
+  width: 50%;
+  padding-left: 5%;
+}
+
+.main-program a {
+  text-decoration: none;
+  padding: 20px;
+  background-color: #ec5242;
+  font-size: 18px;
+  width: 70%;
+  text-align: center;
+  color: #fff;
+  margin: 10px 0;
+}
