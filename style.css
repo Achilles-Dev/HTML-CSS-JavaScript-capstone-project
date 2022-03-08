@@ -5,7 +5,12 @@
 
 body {
   overflow-x: hidden;
-  background-color: #d3d3d3;
+  background-color: #f9f9f9;
+}
+
+@font-face {
+  font-family: 'cocogoose';
+  src: url('public/fonts/Cocogoose\ Pro-trial.ttf');
 }
 
 .header {
@@ -15,6 +20,10 @@ body {
 }
 
 .header .menu-items {
+  display: none;
+}
+
+.header a img {
   display: none;
 }
 
@@ -53,7 +62,7 @@ body {
 
 .headline .headline-details {
   display: flex;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   padding: 15px;
   font-family: 'Lato', sans-serif;
   line-height: 1.5rem;
@@ -98,9 +107,9 @@ body {
   gap: 15px;
 }
 
-.main-program .program-cards .card{
+.main-program .program-cards .card {
   display: flex;
-  background-color: #50545c75;
+  background-color: rgb(96, 98, 103);
   color: #fff;
   align-items: center;
   padding: 3%;
@@ -110,7 +119,7 @@ body {
   width: 15%;
 }
 
-.main-program .program-cards .card h3{
+.main-program .program-cards .card h3 {
   color: #ec5242;
   font-size: 18px;
   width: 35%;
@@ -124,7 +133,7 @@ body {
   padding-left: 5%;
 }
 
-.main-program a {
+.main-program .mobile-button {
   text-decoration: none;
   padding: 20px;
   background-color: #ec5242;
@@ -133,6 +142,10 @@ body {
   text-align: center;
   color: #fff;
   margin: 10px 0;
+}
+
+.main-program .desktop-button {
+  display: none;
 }
 
 /* About */
@@ -190,7 +203,7 @@ body {
   text-align: center;
 }
 
-.about-headline .about-headline-bottom span{
+.about-headline .about-headline-bottom span {
   border-bottom: 1px solid #272a31;
 }
 
@@ -217,12 +230,12 @@ body {
   text-align: center;
 }
 
-.about-logo div{
+.about-logo div {
   display: flex;
   justify-content: center;
   width: 100%;
   border: 1px solid #272a31;
-} 
+}
 
 .past-programs {
   display: flex;
@@ -233,7 +246,8 @@ body {
   background-color: #fff;
 }
 
-.past-programs h2, .past-programs p {
+.past-programs h2,
+.past-programs p {
   text-align: center;
   padding: 0 8%;
 }
@@ -274,7 +288,33 @@ body {
   font-size: 20px;
 }
 
-.about-footer .top{
+/* about footer bottom */
+
+.about-footer .bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+}
+
+.about-footer .bottom div {
+  padding: 5%;
+  width: 50%;
+}
+
+.about-footer .bottom div img {
+  width: 70px;
+  height: 70px;
+}
+
+.about-footer .bottom p {
+  width: 50%;
+}
+
+/* about footer top */
+
+.about-footer .top {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -282,6 +322,8 @@ body {
   padding: 5%;
   font-family: 'Lato', sans-serif;
   font-size: 20px;
+  color: #fff;
+  background-color: #272a31;
 }
 
 .about-footer span {
@@ -311,25 +353,206 @@ body {
   width: 100px;
 }
 
-.about-footer .bottom {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-  background-color: #fff;
-}
 
-.about-footer .bottom div{
-  padding: 5%;
-  width: 50%;
-}
+@media screen and (min-width: 768px) {
 
-.about-footer .bottom div img{
-  width: 70px;
-  height: 70px;
-}
+  /* header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1% 7%;
+    
+  }
 
-.about-footer .bottom p {
-  width: 50%;
-}
+  .header a img {
+    display: block;
+    width: 70px;
+    height: auto;
+  }
 
+  .header i {
+    display: none;
+  }
+
+  .header .menu-items {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header .menu-items ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .header .menu-items ul li {
+    list-style: none;
+  }
+
+  .header .menu-items ul li a {
+    text-decoration: none;
+    color: #272a31;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+  }
+
+  .header .menu-items ul .last-list-child {
+    padding: 10px;
+    border: 3px solid #ec5242;
+  }
+
+  /* headline */
+  .headline {
+    padding: 9%;
+    margin-bottom: 70px;
+  }
+
+  .headline .headline-title p {
+    font-size: 36px;
+  }
+
+  .headline .headline-title h1 {
+    font-size: 100px;
+  }
+
+  .headline .headline-details {
+    width: 60%;
+    font-size: 22px;
+    line-height: 1.6;
+  }
+
+  .headline .headline-bottom {
+    gap: 20px;
+    font-size: 24px;
+  }
+
+  .headline .headline-bottom .bottom-top {
+    font-size: 48px;
+  }
+
+  /* main program */
+  .main-program {
+    padding: 5% 9%;
+  }
+
+  .main-program h2 {
+    font-size: 32px;
+  }
+
+  .main-program .program-cards {
+    flex-direction: row;
+    gap: 3px;
+    margin: 50px 0;
+  }
+
+  .main-program .program-cards .card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .main-program .program-cards .card i {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-program .program-cards .card h3 {
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .main-program .program-cards .card p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-program .mobile-button {
+    display: none;
+  }
+
+  .main-program .desktop-button {
+    text-decoration: none;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    border-bottom: 1px solid #fff;
+    font-size: 20px;
+  }
+
+  /* footer */
+  .footer .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 5%;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: gray;
+    background-color: #272a31;
+  }
+  
+  .footer span {
+    display: flex;
+    align-self: center;
+    width: 40px;
+    border: 1px solid #ec5242;
+  }
+  
+  .footer .top ul {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .footer .top ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: auto;
+    color: gray;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .footer .top ul li:hover {
+    transform: scale(1.2);
+  }
+
+  /* about footer bottom */
+
+  .footer .bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer .bottom div {
+    display: flex;
+    padding: 3%;
+    width: 30%;
+    justify-content: center;
+  }
+
+  .footer .bottom div img {
+    width: 100px;
+    height: 100px;
+    color: #f9f9f9;
+  }
+
+  .footer .bottom p {
+    width: 50%;
+    font-size: 20px;
+  }
+
+}
