@@ -48,29 +48,29 @@ const singers = [
   {
     name: 'Pax Choir Knust',
     image: './public/assets/images/pax-choir.png',
-    details: 'Melodious hymnals & Choral music'
+    details: 'Melodious hymnals & Choral music',
   },
   {
     name: 'Dr. Filfree',
     image: './public/assets/images/drfilfree1.png',
-    details: 'Comedy'
+    details: 'Comedy',
   },
   {
     name: 'Aba.the.poet',
     image: './public/assets/images/aba.the.poet.jpg',
-    details: 'Poetry'
+    details: 'Poetry',
   },
   {
     name: 'GHAMSU Choir',
     image: './public/assets/images/ghamsu-choir.jpg',
-    details: 'Melodious hymnals & Choral music'
+    details: 'Melodious hymnals & Choral music',
   },
 
   {
     name: 'Heralds of Honour',
     image: './public/assets/images/heralds-of-honour.jpeg',
-    details: 'Drama & Choreography'
-  }
+    details: 'Drama & Choreography',
+  },
 ];
 
 const section = document.createElement('section');
@@ -82,11 +82,10 @@ const span = document.createElement('span');
 const cardDiv = document.createElement('div');
 cardDiv.className = 'singers-container';
 span.className = 'border-span';
-section.append(title, span, );
+section.append(title, span);
 
 const footer = document.querySelector('.footer');
 const main = document.querySelector('main');
-
 
 singers.forEach((singer) => {
   const outerDiv = document.createElement('div');
@@ -94,6 +93,7 @@ singers.forEach((singer) => {
   const innerDiv = document.createElement('div');
   innerDiv.className = 'singer-details';
   const image = document.createElement('img');
+  image.className = 'performer-image';
   const name = document.createElement('h2');
   const details = document.createElement('p');
 
@@ -103,7 +103,7 @@ singers.forEach((singer) => {
   image.alt = singer.name;
   innerDiv.append(name, details);
   outerDiv.append(image, innerDiv);
-  cardDiv.appendChild(outerDiv)
+  cardDiv.appendChild(outerDiv);
 });
 
 section.appendChild(cardDiv);
@@ -112,10 +112,4 @@ if (footer !== null) {
   main.insertBefore(section, footer);
 }
 
-
-
-
-//addDetailsSection();
-
-
-
+// addDetailsSection();
