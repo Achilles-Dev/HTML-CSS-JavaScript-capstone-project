@@ -2,11 +2,19 @@
 
 > This is my first capstone project on HTML + CSS + JAVASCRIPT. It is based on a yearly concert of Praises and Drama aimed at    Evangelising to the people of God. It is organised by Catholic students in KNUST and it's popularly known as PRAISYDRAM.
 
+> Below is the various section views for the website.
+
 ## Built With
 
 - HTML
 - CSS
 - Javascript
+
+## Link to project online
+- [OnlineVersion](https://achilles-dev.github.io/HTML-CSS-JavaScript-capstone-project/)
+
+## Link to project recorded video
+- [Live Recording]()
 
 
 ## Getting Started
@@ -59,3 +67,13 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- README template from [Microverse](https://github.com/microverseinc/readme-template)
+- Linter setup from [Microverse](https://github.com/microverseinc/linters-config/tree/master/html-css)
+- Based on this [beautiful design](<https://www.behance.net/gallery/29845175/CC-Global-Summit-2015>) by [Cindy Shin](<https://www.behance.net/adagio07>). Here is the [Creative Commons License of the design](<https://creativecommons.org/licenses/by-nc/4.0/>). 
+
+## 📝 License
+
+This project is **[MIT](./LICENSE.md)** licensed.
