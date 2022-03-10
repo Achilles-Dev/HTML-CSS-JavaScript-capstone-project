@@ -530,6 +530,7 @@ body {
     margin-bottom: 30px;
     background: url('./public/assets/images/bg-deskop.jpeg') no-repeat;
     background-size: cover;
+    height: 80vh;
   }
 
   .headline .headline-title p {
