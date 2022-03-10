@@ -438,6 +438,11 @@ body {
   height: auto;
   border: 1px solid #272a31;
   padding: 5%;
+  transition: all 0.5s ease-in-out;
+}
+
+.about-past-programs .about-cards .about-card:hover {
+  transform: scale(1.2);
 }
 
 .about-past-programs .about-cards .about-card:first-child {
