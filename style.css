@@ -668,11 +668,13 @@ body {
     flex-direction: row;
     gap: 3px;
     margin: 50px 0;
+    justify-content: center;
   }
 
   .main-program .program-cards .card {
     flex-direction: column;
     gap: 20px;
+    min-width: 15%;
   }
 
   .main-program .program-cards .card i {

@@ -4,6 +4,18 @@
 
 > Below is the various section views for the website.
 
+Mobile Homepage view                              |  Mobile Main program view                             |
+:------------------------------------------------:|:-----------------------------------------------:
+![](./public/assets/images/mb-homepage-st.png)    |  ![](./public/assets/images/mb-main-program.png)
+
+Mobile About view                                 |  Mobile Featured Performers view                             |
+:------------------------------------------------:|:-----------------------------------------------:
+![](./public/assets/images/mb-aboutpage-st.png)    |  ![](./public/assets/images/mb-performers-st.png)
+
+Desktop Homepage View                             |  Desktop About view
+:------------------------------------------------:|:-----------------------------------------------:
+![](./public/assets/images/dt-hompage-st.png)     |  ![](./public/assets/images/dt-aboutpage-st.png)
+
 ## Built With
 
 - HTML
@@ -14,7 +26,7 @@
 - [OnlineVersion](https://achilles-dev.github.io/HTML-CSS-JavaScript-capstone-project/)
 
 ## Link to project recorded video
-- [Live Recording]()
+- [Live Recording](https://www.loom.com/share/a80b0f830ee0431c961e774e71b31efe)
 
 
 ## Getting Started
@@ -28,7 +40,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone Repository 
    ```
-   git clone git@github.com:Achilles-Dev/my-portfolio-website.git
+   git clone git@github.com:Achilles-Dev/HTML-CSS-JavaScript-capstone-project.git
    ```
 
 ### Install
