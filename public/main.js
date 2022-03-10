@@ -48,28 +48,36 @@ const singers = [
   {
     name: 'Pax Choir Knust',
     image: './public/assets/images/pax-choir.png',
+    occupation: 'Activity: Singing',
     details: 'Melodious hymnals & Choral music',
   },
   {
-    name: 'Dr. Filfree',
+    name: 'Lawyer Nti',
     image: './public/assets/images/drfilfree1.png',
-    details: 'Comedy',
+    occupation: 'Activity: Comedy',
+    details: 'Mr. Richmond Xavier Amoakoh who starred in the popular TV show Kejetia' 
+             + 'VS Makola was a lawyer for Kegetia law school will grace the occation' 
+             + 'with some wonderful performances.',
   },
   {
     name: 'Aba.the.poet',
     image: './public/assets/images/aba.the.poet.jpg',
-    details: 'Poetry',
+    occupation: 'Activity: Poetry and Spoken word',
+    details: "Miss Francisca Aba Baffoe as she's formally called has always trilled" 
+            + "her audience with great inspiring poems.",
   },
   {
     name: 'GHAMSU Choir',
     image: './public/assets/images/ghamsu-choir.jpg',
+    occupation: 'Activity: Singing',
     details: 'Melodious hymnals & Choral music',
   },
 
   {
     name: 'Heralds of Honour',
     image: './public/assets/images/heralds-of-honour.jpeg',
-    details: 'Drama & Choreography',
+    occupation: 'Activity: Drama & Choreography',
+    details: '',
   },
 ];
 
@@ -92,6 +100,8 @@ singers.forEach((singer) => {
   outerDiv.className = 'singer-container';
   const innerDiv = document.createElement('div');
   innerDiv.className = 'singer-details';
+  const imgDiv = document.createElement('div');
+  imgDiv.className = 'performer-image-container';
   const image = document.createElement('img');
   image.className = 'performer-image';
   const name = document.createElement('h2');
@@ -102,7 +112,8 @@ singers.forEach((singer) => {
   image.src = singer.image;
   image.alt = singer.name;
   innerDiv.append(name, details);
-  outerDiv.append(image, innerDiv);
+  imgDiv.appendChild(image);
+  outerDiv.append(imgDiv, innerDiv);
   cardDiv.appendChild(outerDiv);
 });
 
@@ -111,5 +122,3 @@ section.appendChild(cardDiv);
 if (footer !== null) {
   main.insertBefore(section, footer);
 }
-
-// addDetailsSection();

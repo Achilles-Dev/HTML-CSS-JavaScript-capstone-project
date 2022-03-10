@@ -282,6 +282,7 @@ body {
   justify-content: center;
   list-style: none;
   width: auto;
+  font-weight: 700;
 }
 
 .about-footer .top ul li img {
@@ -340,6 +341,13 @@ body {
   font-size: 16px;
 }
 
+.feature-singers .singer-container .performer-image-container {
+  background: url('public/assets/images/black-and-white.jpg') no-repeat;
+  background-size: 50px 50px;
+  padding: 12px;
+  width: 30%;
+}
+
 /* Main program */
 
 .main-program {
@@ -379,6 +387,12 @@ body {
   color: #fff;
   align-items: center;
   padding: 3%;
+  transition: all 0.5s ease-in-out;
+}
+
+.main-program .program-cards .card:hover {
+  border: 2px solid #fff;
+  margin-top: -1%;
 }
 
 .main-program .program-cards .card i {
@@ -557,6 +571,19 @@ body {
     color: #fff;
   }
 
+  .modal {
+    display: none;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    height: auto;
+    visibility: hidden;
+    opacity: 0;
+    padding: 0;
+  }
+
   /* headline */
   .headline {
     padding: 9%;
@@ -648,6 +675,7 @@ body {
     width: auto;
     color: gray;
     font-size: 28px;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
   }
@@ -668,7 +696,7 @@ body {
   .footer .bottom div {
     display: flex;
     padding: 3%;
-    width: 30%;
+    width: 50%;
     justify-content: center;
   }
 
