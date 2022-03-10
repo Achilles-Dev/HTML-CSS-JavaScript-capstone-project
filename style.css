@@ -107,7 +107,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  background: url('./public/assets/images/bg-mobile.jpg') no-repeat;
+  background: url('public/assets/images/bg-mobile.jpg') no-repeat;
   background-size: cover;
   padding: 30% 5% 2% 5%;
   height: 60vh;
@@ -169,7 +169,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: url('./public/assets/images/bg-mobile.jpg') no-repeat;
+  background: url('public/assets/images/bg-mobile.jpg') no-repeat;
   background-size: cover;
   padding: 30% 5% 2% 5%;
   height: 60vh;
@@ -441,11 +441,11 @@ body {
 }
 
 .about-past-programs .about-cards .about-card:first-child {
-  background: url('./public/assets/images/pd1.jpg') no-repeat;
+  background: url('public/assets/images/pd1.jpg') no-repeat;
 }
 
 .about-past-programs .about-cards .about-card:last-child {
-  background: url('./public/assets/images/pd7.jpg') no-repeat;
+  background: url('public/assets/images/pd7.jpg') no-repeat;
 }
 
 .about-past-programs .about-cards .about-card a {
@@ -528,7 +528,7 @@ body {
   .headline {
     padding: 9%;
     margin-bottom: 30px;
-    background: url('./public/assets/images/bg-deskop.jpeg') no-repeat;
+    background: url('public/assets/images/bg-deskop.jpeg') no-repeat;
     background-size: cover;
     height: 80vh;
   }
@@ -559,7 +559,7 @@ body {
   /* about headline */
   .about-headline {
     margin-bottom: 30px;
-    background: url('./public/assets/images/bg-deskop.jpeg') no-repeat;
+    background: url('public/assets/images/bg-deskop.jpeg') no-repeat;
     background-size: cover;
     padding: 15%;
   }
