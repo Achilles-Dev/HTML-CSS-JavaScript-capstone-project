@@ -6,14 +6,16 @@
 body {
   overflow-x: hidden;
   background-color: #f9f9f9;
+  font-family: 'Lato', sans-serif;
 }
 
 @font-face {
   font-family: 'cocogoose';
-  src: url('public/fonts/Cocogoose\ Pro-trial.ttf');
+  src: url('public/fonts/Cocogoose\ Pro-trial.ttf') format('truetype');
 }
 
 .header {
+  position: absolute;
   padding: 5%;
   color: #272a31;
   margin-bottom: 20px;
@@ -42,7 +44,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   gap: 20px;
-  background: #272a31;
+  background-color: #272a31;
   visibility: visible;
   opacity: 1;
   padding: 10%;
@@ -98,17 +100,17 @@ body {
   justify-content: center;
   width: 100%;
   border: 1px solid #272a31;
-  background: #ec5242;
+  background-color: #ec5242;
 }
 
 .about-headline {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  background-color: #f9f9f9;
-  align-items: center;
-  padding: 5%;
-  margin-bottom: 20px;
+  background: url('public/assets/images/bg-mobile.jpg') no-repeat;
+  background-size: cover;
+  padding: 30% 5% 2% 5%;
+  height: 60vh;
 }
 
 .about-headline .about-headline-title {
@@ -167,8 +169,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 5%;
-  margin-bottom: 70px;
+  background: url('public/assets/images/bg-mobile.jpg') no-repeat;
+  background-size: cover;
+  padding: 30% 5% 2% 5%;
+  height: 60vh;
 }
 
 .headline div {
@@ -178,7 +182,7 @@ body {
 }
 
 .headline .headline-title {
-  color: #ec5242;
+  font-family: 'cocogoose', sans-serif;
 }
 
 .headline .headline-title h1,
@@ -189,10 +193,16 @@ body {
 }
 
 .headline .headline-title h1 {
-  font-size: 48px;
+  font-size: 11vw;
+  background-image: url('public/assets/images/bg-text-overlay.png');
+  background-position: top;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-right: 20px;
 }
 
 .headline .headline-title p {
+  color: #ec5242;
   font-size: 24px;
 }
 
@@ -298,12 +308,17 @@ body {
 
 .feature-singers .singer-container {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .feature-singers .singer-container .performer-image {
   width: 100px;
   height: 80px;
+  transition: all 0.5s ease-in-out;
+}
+
+.feature-singers .singer-container .performer-image:hover {
+  transform: scale(1.5);
 }
 
 .feature-singers .singer-container .singer-details {
@@ -426,11 +441,11 @@ body {
 }
 
 .about-past-programs .about-cards .about-card:first-child {
-  background: url('public/assets/images/pd1.jpg');
+  background: url('public/assets/images/pd1.jpg') no-repeat;
 }
 
 .about-past-programs .about-cards .about-card:last-child {
-  background: url('public/assets/images/pd7.jpg');
+  background: url('public/assets/images/pd7.jpg') no-repeat;
 }
 
 .about-past-programs .about-cards .about-card a {
@@ -456,6 +471,7 @@ body {
 @media screen and (min-width: 768px) {
   /* header */
   .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     background-color: #fff;
@@ -511,7 +527,9 @@ body {
   /* headline */
   .headline {
     padding: 9%;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
+    background: url('public/assets/images/bg-deskop.jpeg') no-repeat;
+    background-size: cover;
   }
 
   .headline .headline-title p {
@@ -539,7 +557,10 @@ body {
 
   /* about headline */
   .about-headline {
-    margin-bottom: 70px;
+    margin-bottom: 30px;
+    background: url('public/assets/images/bg-deskop.jpeg') no-repeat;
+    background-size: cover;
+    padding: 15%;
   }
 
   .about-headline .about-headline-title p {
@@ -551,8 +572,7 @@ body {
   }
 
   .about-headline .about-headline-details {
-    text-align: center;
-    width: 70%;
+    justify-content: center;
   }
 
   .about-headline .about-headline-bottom p {
