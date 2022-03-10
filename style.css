@@ -538,13 +538,14 @@ body {
   }
 
   .headline .headline-title h1 {
-    font-size: 100px;
+    font-size: 72px;
   }
 
   .headline .headline-details {
     width: 60%;
     font-size: 22px;
     line-height: 1.6;
+    padding: 2%;
   }
 
   .headline .headline-bottom {
@@ -569,7 +570,7 @@ body {
   }
 
   .about-headline .about-headline-title h1 {
-    font-size: 60px;
+    font-size: 72px;
   }
 
   .about-headline .about-headline-details {
