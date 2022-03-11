@@ -264,7 +264,7 @@ body {
   padding: 5%;
   font-family: 'Lato', sans-serif;
   font-size: 20px;
-  color: #fff;
+  color: gray;
   background-color: #272a31;
 }
 
@@ -273,7 +273,6 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  color: #fff;
 }
 
 .about-footer .top ul li {
@@ -283,6 +282,11 @@ body {
   list-style: none;
   width: auto;
   font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+.about-footer .top ul li:hover {
+  transform: scale(1.2);
 }
 
 .about-footer .top ul li img {
@@ -296,6 +300,7 @@ body {
   gap: 10px;
   padding: 5%;
   overflow-x: hidden;
+  background-color: #fff;
 }
 
 .feature-singers .feature-title {
@@ -313,12 +318,12 @@ body {
 
 .feature-singers .singer-container {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .feature-singers .singer-container .performer-image {
   width: 100px;
-  height: 80px;
+  height: 90px;
   transition: all 0.5s ease-in-out;
 }
 
@@ -329,23 +334,49 @@ body {
 .feature-singers .singer-container .singer-details {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
+  width: 75%;
 }
 
 .feature-singers .singer-container .singer-details h2 {
   color: #272a31;
 }
 
+.feature-singers .singer-container .singer-details .performer-activity {
+  color: #ec5242;
+  font-style: italic;
+}
+
 .feature-singers .singer-container .singer-details p {
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
+  color: #272a31;
+}
+
+.feature-singers .singer-container .singer-details .performer-bottom-border {
+  border: 1px solid #d3d3d3;
+  width: 10%;
 }
 
 .feature-singers .singer-container .performer-image-container {
   background: url('public/assets/images/black-and-white.jpg') no-repeat;
   background-size: 50px 50px;
   padding: 12px;
-  width: 30%;
+  width: 25%;
+}
+
+.feature-singers .more-button {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  padding: 3%; 
+  background-color: #fff;
+  margin-top: 20px;
+  border: 1px solid #d3d3d3;
+}
+
+.feature-singers .more-button i {
+  color: #ec5242;
 }
 
 /* Main program */
@@ -446,21 +477,24 @@ body {
 .about-past-programs .about-cards {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   width: 100%;
   padding: 5%;
 }
 
 .about-past-programs .about-cards .about-card {
   width: 90%;
-  height: auto;
+  height: 200px;
   border: 1px solid #272a31;
   padding: 5%;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-past-programs .about-cards .about-card:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .about-past-programs .about-cards .about-card:first-child {
@@ -487,8 +521,67 @@ body {
   text-align: center;
 }
 
-.footer {
-  display: none;
+/* footer bottom */
+
+.footer .bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+}
+
+.footer .bottom div {
+  padding: 5%;
+  width: 50%;
+}
+
+.footer .bottom div img {
+  width: 70px;
+  height: 70px;
+}
+
+.footer .bottom p {
+  width: 50%;
+}
+
+/* footer top */
+
+.footer .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 5%;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  color: gray;
+  background-color: #272a31;
+}
+
+.footer .top ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer .top ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: auto;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+.footer .top ul li:hover {
+  transform: scale(1.2);
+}
+
+.footer .top ul li img {
+  width: 100px;
 }
 
 @media screen and (min-width: 768px) {
@@ -553,7 +646,7 @@ body {
     display: flex;
     background-color: #272a31;
   }
-  
+
   .header .topmost-nav ul {
     display: flex;
     justify-content: flex-end;
@@ -569,19 +662,6 @@ body {
 
   .header .topmost-nav ul li i {
     color: #fff;
-  }
-
-  .modal {
-    display: none;
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    height: auto;
-    visibility: hidden;
-    opacity: 0;
-    padding: 0;
   }
 
   /* headline */
@@ -791,6 +871,17 @@ body {
     width: 70%;
   }
 
+  .about-past-programs .about-cards .about-card {
+    width: 90%;
+    height: 200px;
+    border: 1px solid #272a31;
+    padding: 5%;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .about-footer .top {
     display: none;
   }
@@ -822,5 +913,9 @@ body {
 
   .feature-singers .singer-container {
     width: 100%;
+  }
+
+  .feature-singers .more-button {
+    display: none;
   }
 }
