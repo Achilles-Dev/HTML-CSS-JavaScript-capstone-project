@@ -113,8 +113,8 @@ body {
   gap: 30px;
   background: url('public/assets/images/bg-mobile.jpg') no-repeat;
   background-size: cover;
-  padding: 30% 5% 2% 5%;
-  height: 60vh;
+  padding: 30% 5% 10% 5%;
+  height: 100%;
 }
 
 .about-headline .about-headline-title {
@@ -175,8 +175,8 @@ body {
   gap: 20px;
   background: url('public/assets/images/bg-mobile.jpg') no-repeat;
   background-size: cover;
-  padding: 30% 5% 2% 5%;
-  height: 60vh;
+  padding: 30% 5% 10% 5%;
+  height: 100%;
 }
 
 .headline div {
@@ -601,7 +601,7 @@ body {
     height: auto;
   }
 
-  .header i {
+  .header .menu-icon {
     display: none;
   }
 
@@ -667,10 +667,8 @@ body {
   /* headline */
   .headline {
     padding: 9%;
-    margin-bottom: 30px;
     background: url('public/assets/images/bg-deskop.jpeg') no-repeat;
     background-size: cover;
-    height: 80vh;
   }
 
   .headline .headline-title p {
@@ -699,10 +697,9 @@ body {
 
   /* about headline */
   .about-headline {
-    margin-bottom: 30px;
     background: url('public/assets/images/bg-deskop.jpeg') no-repeat;
     background-size: cover;
-    padding: 15%;
+    padding: 9%;
   }
 
   .about-headline .about-headline-title p {
