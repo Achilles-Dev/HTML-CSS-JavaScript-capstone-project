@@ -21,7 +21,7 @@ a.style.textDecoration = 'none';
 a.style.color = 'white';
 li.appendChild(a);
 
-let aboutItem = ul.firstElementChild;
+const aboutItem = ul.firstElementChild;
 
 const viewMobileMenu = () => {
   nav.classList.remove('menu-items');
@@ -30,14 +30,12 @@ const viewMobileMenu = () => {
   ul.insertBefore(li, firstListItem);
   ul.className = 'modal-list';
   document.body.style.overflow = 'hidden';
-  if (footer.className === 'footer'){
+  if (footer.className === 'footer') {
     aboutItem.style.color = '#ec5242';
-    console.log('footer')
-  } else if (footer.className === 'about-footer'){
+  } else if (footer.className === 'about-footer') {
     aboutItem.className = '';
     aboutItem.style.color = '#fff';
     a.style.color = '#ec5242';
-    console.log('about-footer')
   }
 };
 
@@ -61,8 +59,6 @@ const closeMobileMenuOnDsktopView = (e) => {
   }
 };
 
-
-
 menuIcon.addEventListener('click', viewMobileMenu);
 
 closeButton.addEventListener('click', closeMobileMenu);
@@ -84,16 +80,16 @@ const singers = [
     name: 'Lawyer Nti',
     image: './public/assets/images/lawyer-nti.jpeg',
     occupation: 'Activity: Comedy',
-    details: 'Mr. Richmond Xavier Amoakoh who starred in the popular TV show Kejetia ' 
-             + 'VS Makola was a lawyer for Kegetia law school will grace the occation ' 
+    details: 'Mr. Richmond Xavier Amoakoh who starred in the popular TV show Kejetia '
+             + 'VS Makola was a lawyer for Kegetia law school will grace the occation '
              + 'with some wonderful performances.',
   },
   {
     name: 'Aba.the.poet',
     image: './public/assets/images/aba.the.poet.jpg',
     occupation: 'Activity: Poetry and Spoken word',
-    details: "Miss Francisca Aba Baffoe as she's formally called has always trilled " 
-            + "her audience with great inspiring poems.",
+    details: "Miss Francisca Aba Baffoe as she's formally called has always trilled "
+            + 'her audience with great inspiring poems.',
   },
   {
     name: 'GHAMSU Choir',
@@ -106,7 +102,7 @@ const singers = [
     name: 'Heralds of Honour',
     image: './public/assets/images/heralds-of-honour.jpeg',
     occupation: 'Activity: Drama & Choreography',
-    details: 'They are well known for their various creative plays when preaches the ' 
+    details: 'They are well known for their various creative plays when preaches the '
            + 'word of God to the audience.',
   },
 ];
@@ -117,7 +113,7 @@ const title = document.createElement('h2');
 title.className = 'feature-title';
 title.textContent = 'Featured Performers';
 const span = document.createElement('span');
-let cardDiv = document.createElement('div');
+const cardDiv = document.createElement('div');
 cardDiv.className = 'singers-container';
 span.className = 'border-span';
 section.append(title, span);
@@ -158,33 +154,30 @@ const addSinger = () => {
     imgDiv.appendChild(image);
     outerDiv.append(imgDiv, innerDiv);
     if (screenWidth.matches) {
-    cardDiv.appendChild(outerDiv);
-    } else {
-      if (singers.indexOf(singer) < 2) {
-        cardDiv.appendChild(outerDiv);
-      }
-    }  
+      cardDiv.appendChild(outerDiv);
+    } else if (singers.indexOf(singer) < 2) {
+      cardDiv.appendChild(outerDiv);
+    }
   });
-}
+};
 
 addSinger();
 
 window.addEventListener('resize', () => {
-    if (cardDiv.childElementCount === 0){
-      addSinger();
-    } else if (cardDiv.childElementCount <= 2){
-      while(cardDiv.firstChild){
-        cardDiv.firstChild.remove();
-      }
-      addSinger();
-    } else if (cardDiv.childElementCount <= 5 && !screenWidth.matches) {
-      while(cardDiv.firstChild){
-        cardDiv.firstChild.remove();
-      }
-      addSinger();
+  if (cardDiv.childElementCount === 0) {
+    addSinger();
+  } else if (cardDiv.childElementCount <= 2) {
+    while (cardDiv.firstChild) {
+      cardDiv.firstChild.remove();
     }
-  });
-
+    addSinger();
+  } else if (cardDiv.childElementCount <= 5 && !screenWidth.matches) {
+    while (cardDiv.firstChild) {
+      cardDiv.firstChild.remove();
+    }
+    addSinger();
+  }
+});
 
 // const checkScreenSize = () => {
 //   if (screenWidth.matches){
@@ -193,7 +186,7 @@ window.addEventListener('resize', () => {
 //   } else {
 //     const moreButton = document.createElement('button');
 //       moreButton.textContent = `More <i class="fas fa-arrow-down"></i>`;
-//       let children = cardDiv.childNodes;  
+//       let children = cardDiv.childNodes;
 //       for (let i = 0; i < children.length; i++) {
 //         if (i < 2) {
 //           section.appendChild(children[i]);

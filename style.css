@@ -230,6 +230,30 @@ body {
   font-weight: 700;
 }
 
+/* footer bottom */
+
+.footer .bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+}
+
+.footer .bottom div {
+  padding: 5%;
+  width: 50%;
+}
+
+.footer .bottom div img {
+  width: 70px;
+  height: 70px;
+}
+
+.footer .bottom p {
+  width: 50%;
+}
+
 /* about footer bottom */
 
 .about-footer .bottom {
@@ -252,6 +276,41 @@ body {
 
 .about-footer .bottom p {
   width: 50%;
+}
+
+/* footer top */
+
+.footer .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 5%;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  color: gray;
+  background-color: #272a31;
+}
+
+.footer .top ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer .top ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: auto;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+.footer .top ul li img {
+  width: 100px;
 }
 
 /* about footer top */
@@ -283,6 +342,11 @@ body {
   width: auto;
   font-weight: 700;
   transition: all 0.5s ease-in-out;
+}
+
+/* footer top li hover */
+.footer .top ul li:hover {
+  transform: scale(1.2);
 }
 
 .about-footer .top ul li:hover {
@@ -369,7 +433,7 @@ body {
   display: flex;
   gap: 5px;
   justify-content: center;
-  padding: 3%; 
+  padding: 3%;
   background-color: #fff;
   margin-top: 20px;
   border: 1px solid #d3d3d3;
@@ -519,69 +583,6 @@ body {
 .about-past-programs .about-cards .about-card a p {
   font-size: 20px;
   text-align: center;
-}
-
-/* footer bottom */
-
-.footer .bottom {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-  background-color: #fff;
-}
-
-.footer .bottom div {
-  padding: 5%;
-  width: 50%;
-}
-
-.footer .bottom div img {
-  width: 70px;
-  height: 70px;
-}
-
-.footer .bottom p {
-  width: 50%;
-}
-
-/* footer top */
-
-.footer .top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 5%;
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
-  color: gray;
-  background-color: #272a31;
-}
-
-.footer .top ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.footer .top ul li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  width: auto;
-  font-weight: 700;
-  transition: all 0.5s ease-in-out;
-}
-
-.footer .top ul li:hover {
-  transform: scale(1.2);
-}
-
-.footer .top ul li img {
-  width: 100px;
 }
 
 @media screen and (min-width: 768px) {
