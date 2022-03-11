@@ -109,24 +109,31 @@ const singers = [
 
 const section = document.createElement('section');
 section.className = 'feature-singers';
+
 const title = document.createElement('h2');
 title.className = 'feature-title';
 title.textContent = 'Featured Performers';
+
 const span = document.createElement('span');
+span.className = 'border-span';
+
 const cardDiv = document.createElement('div');
 cardDiv.className = 'singers-container';
-span.className = 'border-span';
+
 section.append(title, span);
 
 const screenWidth = window.matchMedia('(min-width: 768px)');
+
 const main = document.querySelector('main');
 
 const moreButton = document.createElement('button');
 moreButton.className = 'more-button';
 moreButton.type = 'button';
 moreButton.textContent = 'MORE';
+
 const downArrowIcon = document.createElement('i');
-downArrowIcon.className = 'fas fa-arrow-down';
+downArrowIcon.className = 'fas fa-angle-down';
+
 moreButton.appendChild(downArrowIcon);
 
 const addSinger = () => {
@@ -164,14 +171,17 @@ const addSinger = () => {
 addSinger();
 
 window.addEventListener('resize', () => {
-  if (cardDiv.childElementCount === 0) {
+  if (moreButton.style.display === 'none'){
+    //
+  } else if (cardDiv.childElementCount === 0) {
     addSinger();
-  } else if (cardDiv.childElementCount <= 2) {
-    while (cardDiv.firstChild) {
-      cardDiv.firstChild.remove();
-    }
-    addSinger();
-  } else if (cardDiv.childElementCount <= 5 && !screenWidth.matches) {
+  } else if (cardDiv.childElementCount === 2) {
+      while (cardDiv.firstChild) {
+        cardDiv.firstChild.remove();
+      }
+      addSinger();
+    
+  } else if (cardDiv.childElementCount === singers.length && !screenWidth.matches) {
     while (cardDiv.firstChild) {
       cardDiv.firstChild.remove();
     }
@@ -179,28 +189,42 @@ window.addEventListener('resize', () => {
   }
 });
 
-// const checkScreenSize = () => {
-//   if (screenWidth.matches){
-//     section.appendChild(cardDiv);
-//     console.log(section);
-//   } else {
-//     const moreButton = document.createElement('button');
-//       moreButton.textContent = `More <i class="fas fa-arrow-down"></i>`;
-//       let children = cardDiv.childNodes;
-//       for (let i = 0; i < children.length; i++) {
-//         if (i < 2) {
-//           section.appendChild(children[i]);
-//           console.log(section);
-//         }
-//       }
-//   }
-// }
+const addMoreSingers = () => {
+  if (cardDiv.childElementCount === 2) {
+    singers.forEach((singer) => {
+      if (singers.indexOf(singer) >= 2 ) {
+        const outerDiv = document.createElement('div');
+      outerDiv.className = 'singer-container';
+      const innerDiv = document.createElement('div');
+      innerDiv.className = 'singer-details';
+      const imgDiv = document.createElement('div');
+      imgDiv.className = 'performer-image-container';
+      const image = document.createElement('img');
+      image.className = 'performer-image';
+      const name = document.createElement('h2');
+      const details = document.createElement('p');
+      const occupation = document.createElement('span');
+      occupation.className = 'performer-activity';
+      const borderBottom = document.createElement('span');
+      borderBottom.className = 'performer-bottom-border';
+      occupation.textContent = singer.occupation;
+      details.textContent = singer.details;
+      name.textContent = singer.name;
+      image.src = singer.image;
+      image.alt = singer.name;
+      innerDiv.append(name, occupation, borderBottom, details);
+      imgDiv.appendChild(image);
+      outerDiv.append(imgDiv, innerDiv);
+      cardDiv.appendChild(outerDiv);
+      }
+    });
+  }
+}
 
-// window.addEventListener('resize', () => {
-//  checkScreenSize();
-// });
-
-// checkScreenSize();
+moreButton.addEventListener('click', () => {
+  addMoreSingers();
+  moreButton.style.display = 'none';
+});
 
 section.appendChild(cardDiv);
 section.appendChild(moreButton);

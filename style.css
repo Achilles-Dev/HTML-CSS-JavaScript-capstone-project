@@ -3,15 +3,15 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: 'cocogoose';
+  src: url('public/fonts/Cocogoose\ Pro-trial.ttf') format('truetype');
+}
+
 body {
   overflow-x: hidden;
   background-color: #f9f9f9;
   font-family: 'Lato', sans-serif;
-}
-
-@font-face {
-  font-family: 'cocogoose';
-  src: url('public/fonts/Cocogoose\ Pro-trial.ttf') format('truetype');
 }
 
 .header {
@@ -25,7 +25,7 @@ body {
   display: none;
 }
 
-.header i {
+.header .menu-icon {
   cursor: pointer;
 }
 
@@ -431,8 +431,9 @@ body {
 
 .feature-singers .more-button {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   justify-content: center;
+  align-items: center;
   padding: 3%;
   background-color: #fff;
   margin-top: 20px;
@@ -594,6 +595,7 @@ body {
     justify-content: space-between;
     background-color: #fff;
     padding: 0;
+    margin: 0;
   }
 
   .header a img {
