@@ -171,16 +171,15 @@ const addSinger = () => {
 addSinger();
 
 window.addEventListener('resize', () => {
-  if (moreButton.style.display === 'none'){
-    //
+  if (moreButton.style.display === 'none') {
+    // do nothing
   } else if (cardDiv.childElementCount === 0) {
     addSinger();
   } else if (cardDiv.childElementCount === 2) {
-      while (cardDiv.firstChild) {
-        cardDiv.firstChild.remove();
-      }
-      addSinger();
-    
+    while (cardDiv.firstChild) {
+      cardDiv.firstChild.remove();
+    }
+    addSinger();
   } else if (cardDiv.childElementCount === singers.length && !screenWidth.matches) {
     while (cardDiv.firstChild) {
       cardDiv.firstChild.remove();
@@ -192,34 +191,34 @@ window.addEventListener('resize', () => {
 const addMoreSingers = () => {
   if (cardDiv.childElementCount === 2) {
     singers.forEach((singer) => {
-      if (singers.indexOf(singer) >= 2 ) {
+      if (singers.indexOf(singer) >= 2) {
         const outerDiv = document.createElement('div');
-      outerDiv.className = 'singer-container';
-      const innerDiv = document.createElement('div');
-      innerDiv.className = 'singer-details';
-      const imgDiv = document.createElement('div');
-      imgDiv.className = 'performer-image-container';
-      const image = document.createElement('img');
-      image.className = 'performer-image';
-      const name = document.createElement('h2');
-      const details = document.createElement('p');
-      const occupation = document.createElement('span');
-      occupation.className = 'performer-activity';
-      const borderBottom = document.createElement('span');
-      borderBottom.className = 'performer-bottom-border';
-      occupation.textContent = singer.occupation;
-      details.textContent = singer.details;
-      name.textContent = singer.name;
-      image.src = singer.image;
-      image.alt = singer.name;
-      innerDiv.append(name, occupation, borderBottom, details);
-      imgDiv.appendChild(image);
-      outerDiv.append(imgDiv, innerDiv);
-      cardDiv.appendChild(outerDiv);
+        outerDiv.className = 'singer-container';
+        const innerDiv = document.createElement('div');
+        innerDiv.className = 'singer-details';
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'performer-image-container';
+        const image = document.createElement('img');
+        image.className = 'performer-image';
+        const name = document.createElement('h2');
+        const details = document.createElement('p');
+        const occupation = document.createElement('span');
+        occupation.className = 'performer-activity';
+        const borderBottom = document.createElement('span');
+        borderBottom.className = 'performer-bottom-border';
+        occupation.textContent = singer.occupation;
+        details.textContent = singer.details;
+        name.textContent = singer.name;
+        image.src = singer.image;
+        image.alt = singer.name;
+        innerDiv.append(name, occupation, borderBottom, details);
+        imgDiv.appendChild(image);
+        outerDiv.append(imgDiv, innerDiv);
+        cardDiv.appendChild(outerDiv);
       }
     });
   }
-}
+};
 
 moreButton.addEventListener('click', () => {
   addMoreSingers();
