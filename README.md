@@ -4,17 +4,17 @@
 
 > Below is the various section views for the website.
 
-Mobile Homepage view                              |  Mobile Main program view                             |
+Mobile Homepage view                              |  Mobile Menu view                             |
 :------------------------------------------------:|:-----------------------------------------------:
-![](./public/assets/images/mb-homepage-st.png)    |  ![](./public/assets/images/mb-main-program.png)
+![](./public/assets/images/mb-homepage-st.png)    |  ![](./public/assets/images/mb-menu-st.png)
 
 Mobile About view                                 |  Mobile Featured Performers view                             |
 :------------------------------------------------:|:-----------------------------------------------:
 ![](./public/assets/images/mb-aboutpage-st.png)    |  ![](./public/assets/images/mb-performers-st.png)
 
-Desktop Homepage View                             |  Desktop About view
+Desktop Homepage View                             |  Desktop Featured Performers view
 :------------------------------------------------:|:-----------------------------------------------:
-![](./public/assets/images/dt-hompage-st.png)     |  ![](./public/assets/images/dt-aboutpage-st.png)
+![](./public/assets/images/dt-homepage-st.png)     |  ![](./public/assets/images/dt-performers-st.png)
 
 ## Built With
 
@@ -26,7 +26,7 @@ Desktop Homepage View                             |  Desktop About view
 - [OnlineVersion](https://achilles-dev.github.io/HTML-CSS-JavaScript-capstone-project/)
 
 ## Link to project recorded video
-- [Live Recording](https://www.loom.com/share/a80b0f830ee0431c961e774e71b31efe)
+- [Live Video Recording](https://www.loom.com/share/bfd4deeac4484cdd9daa0a9bbce2bcfe)
 
 
 ## Getting Started
